@@ -15,9 +15,9 @@ function! DoName(name)
   let ptrn = substitute(a:name, '[^a-zA-Z0-9_@. ]', '\\S\\?', 'g')
   let clr  = Hash(key)
 
-  exec 'syn match c'.clr.' "\<'.ptrn.'\>"'
-  exec 'syn cluster ircNames add=c' . clr
-  exec 'hi def c'.clr.' ctermfg=' . clr
+  exec 'syn match irc_c'.clr.' "\<'.ptrn.'\>"'
+  exec 'syn cluster ircNames add=irc_c' . clr
+  exec 'hi def irc_c'.clr.' ctermfg=' . clr
 endfunction
 
 function! DoNames()
