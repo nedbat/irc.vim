@@ -29,17 +29,17 @@ function! DoNames()
   endfor
 endfunction
 
-syn match ircSpeaker "\v(\<[-+*@ ]*)?[a-zA-Z0-9#\[\]\{\}|_@. ]+[:>]\s"            contained contains=@ircNames skipwhite nextgroup=ircName
-syn match ircName    "\v[a-zA-Z0-9#-|_@.]+:\s"                                    contained contains=@ircNames skipwhite nextgroup=ircName
-syn match ircMsg    "\v(.+)$"                                                     contained contains=ircName   skipwhite nextgroup=ircName
-syn match ircError  "\v(error)"
-syn match ircDate    "\v([\(\[]?[0-9-]* *\d\d:\d\d(:\d\d)?[APMapm]*[)\]]?|^)"     contained                    skipwhite nextgroup=ircSys,ircSpeaker
-syn match ircDo     "\v\&.+"                                                      contains=@ircDate
-syn match ircSys     "\v^Conversation.*"                                          contained
-syn match ircSys     "\v(\w|\>|-)+[^:<]\s.*"                                      contained contains=@ircNames
-syn match ircFile    "\v(\d{4}-\d{2}-\d{2}\.\d{6}([-+]\d{4}\u{3})?.txt:|^)"                                              nextgroup=ircDate
-syn match ircURL     "\v(http://|wwww.)\S+"
-syn match comment    "^#.*"
+syn match ircSpeaker  "\v(\<[-+*@ ]*)?[a-zA-Z0-9#\[\]\{\}|_@. ]+[:>]\s"             contained contains=@ircNames skipwhite nextgroup=ircName
+syn match ircName     "\v[a-zA-Z0-9#-|_@.]+:\s"                                     contained contains=@ircNames skipwhite nextgroup=ircName
+syn match ircMsg      "\v(.+)$"                                                     contained contains=ircName   skipwhite nextgroup=ircName
+syn match ircError    "\v(error)"
+syn match ircDate     "\v([\(\[]?[0-9-]* *\d\d:\d\d(:\d\d)?[APMapm]*[)\]]?|^)"      contained                    skipwhite nextgroup=ircSys,ircSpeaker
+syn match ircDo       "\v\&.+"                                                      contains=@ircDate
+syn match ircSys      "\v^Conversation.*"                                           contained
+syn match ircSys      "\v(\w|\>|-)+[^:<]\s.*"                                       contained contains=@ircNames
+syn match ircFile     "\v(\d{4}-\d{2}-\d{2}\.\d{6}([-+]\d{4}\u{3})?.txt:|^)"                                              nextgroup=ircDate
+syn match ircURL      "\v(http://|wwww.)\S+"
+syn match comment     "^#.*"
 
 "let r_ircSpeaker = "\v(\<[-+*@ ]*)?[a-zA-Z0-9#\[\]\{\}|_@. ]+[:>]\s"
 "execute 'syn match ircSpeaker /' .  r_ircSpeaker . '/ contained contains=@ircNames skipwhite nextgroup=ircName'
@@ -47,8 +47,8 @@ syn match comment    "^#.*"
 
 syn cluster ircNames contains=NONE
 call DoNames()
-syn match ircIncr    "\w\+++" contains=@ircNames
-syn match ircDecr    "\w\+--" contains=@ircNames
+syn match ircIncr     "\w\+++" contains=@ircNames
+syn match ircDecr     "\w\+--" contains=@ircNames
 
 syn cluster ircColors contains=ircDecr,ircIncr
 
