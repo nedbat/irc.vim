@@ -54,6 +54,19 @@ syn cluster ircColors contains=ircDecr,ircIncr
 
 hi def comment Comment
 
+hi ircDo        guifg=#ff005f guibg=#000000 gui=bold
+hi ircMsg       guifg=#bcbcbc guibg=#000000
+hi ircError     guifg=#ff0000 guibg=#000000 gui=bold
+hi ircFile      guifg=#ffd700 guibg=#000000 gui=bold
+
+hi ircSys       guifg=#626262 guibg=#000000 gui=none
+hi ircDate      guifg=#848484 guibg=#262626 gui=bold
+hi ircURL       guifg=#005fff guibg=#000000 gui=bold
+hi ircIncr      guifg=#00af00 guibg=#000000 gui=bold
+hi ircDecr      guifg=#ff0000 guibg=#000000 gui=bold
+hi ircName      guifg=#d78700 guibg=#000000 gui=bold
+hi ircSpeaker   guifg=#af875f guibg=#121212 gui=bold
+
 if &t_Co > 255
   hi ircDo      ctermfg=197 ctermbg=000 cterm=bold
   hi ircMsg     ctermfg=250 ctermbg=000 cterm=none
