@@ -36,7 +36,8 @@ syn match ircError    "\v(error)"
 syn match ircDate     "\v([\(\[]?[0-9-]* *\d\d:\d\d(:\d\d)?[APMapm]*[)\]]?|^)"      contained                    skipwhite nextgroup=ircSys,ircSpeaker
 syn match ircDo       "\v\&.+"                                                      contains=@ircDate
 syn match ircSys      "\v^Conversation.*"                                           contained
-syn match ircSys      "\v(\w|\>|-|\*)+[^:<]\s.*"                                    contained contains=@ircNames
+syn match ircSys      "\v(\w|\>|-|\*)+[^:<]\s.*"                                    contained contains=@ircNames,ircAction
+syn match ircAction   "\v.*sets mode:\s.*$"                                         contained
 syn match ircFile     "\v(\d{4}-\d{2}-\d{2}\.\d{6}([-+]\d{4}\u{3})?.txt:|^)"                                              nextgroup=ircDate
 syn match ircURL      "\v(https?://|www\.)\S+"
 syn match comment     "^#.*"
