@@ -38,7 +38,7 @@ syn match ircDo       "\v\&.+"                                                  
 syn match ircSys      "\v^Conversation.*"                                           contained
 syn match ircSys      "\v(\w|\>|-|\*)+[^:<]\s.*"                                    contained contains=@ircNames
 syn match ircFile     "\v(\d{4}-\d{2}-\d{2}\.\d{6}([-+]\d{4}\u{3})?.txt:|^)"                                              nextgroup=ircDate
-syn match ircURL      "\v(http://|wwww.)\S+"
+syn match ircURL      "\v(https?://|www\.)\S+"
 syn match comment     "^#.*"
 
 "let r_ircSpeaker = "\v(\<[-+*@ ]*)?[a-zA-Z0-9#\[\]\{\}|_@. ]+[:>]\s"
