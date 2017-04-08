@@ -54,46 +54,46 @@ syn cluster ircColors contains=ircDecr,ircIncr
 
 hi def comment Comment
 
-hi ircDo        guifg=#ff005f guibg=#000000 gui=bold
-hi ircMsg       guifg=#bcbcbc guibg=#000000
-hi ircError     guifg=#ff0000 guibg=#000000 gui=bold
-hi ircFile      guifg=#ffd700 guibg=#000000 gui=bold
+hi def ircDo        guifg=#ff005f guibg=#000000 gui=bold
+hi def ircMsg       guifg=#bcbcbc guibg=#000000
+hi def ircError     guifg=#ff0000 guibg=#000000 gui=bold
+hi def ircFile      guifg=#ffd700 guibg=#000000 gui=bold
 
-hi ircSys       guifg=#626262 guibg=#000000 gui=none
-hi ircDate      guifg=#848484 guibg=#262626 gui=bold
-hi ircURL       guifg=#005fff guibg=#000000 gui=bold
-hi ircIncr      guifg=#00af00 guibg=#000000 gui=bold
-hi ircDecr      guifg=#ff0000 guibg=#000000 gui=bold
-hi ircName      guifg=#d78700 guibg=#000000 gui=bold
-hi ircSpeaker   guifg=#af875f guibg=#121212 gui=bold
+hi def ircSys       guifg=#626262 guibg=#000000 gui=none
+hi def ircDate      guifg=#848484 guibg=#262626 gui=bold
+hi def ircURL       guifg=#005fff guibg=#000000 gui=bold
+hi def ircIncr      guifg=#00af00 guibg=#000000 gui=bold
+hi def ircDecr      guifg=#ff0000 guibg=#000000 gui=bold
+hi def ircName      guifg=#d78700 guibg=#000000 gui=bold
+hi def ircSpeaker   guifg=#af875f guibg=#121212 gui=bold
 
 if &t_Co > 255
-  hi ircDo      ctermfg=197 ctermbg=000 cterm=bold
-  hi ircMsg     ctermfg=250 ctermbg=000 cterm=none
-  hi ircError   ctermfg=196 ctermbg=000 cterm=bold
-  hi ircFile    ctermfg=220 ctermbg=000 cterm=bold
+  hi def ircDo      ctermfg=197 ctermbg=000 cterm=bold
+  hi def ircMsg     ctermfg=250 ctermbg=000 cterm=none
+  hi def ircError   ctermfg=196 ctermbg=000 cterm=bold
+  hi def ircFile    ctermfg=220 ctermbg=000 cterm=bold
 
-  hi ircSys     ctermfg=241 ctermbg=000 cterm=none
-  hi ircDate    ctermfg=245 ctermbg=235 cterm=bold
-  hi ircURL     ctermfg=027 ctermbg=000 cterm=bold
-  hi ircIncr    ctermfg=034 ctermbg=000 cterm=bold
-  hi ircDecr    ctermfg=196 ctermbg=000 cterm=bold
-  hi ircName    ctermfg=172 ctermbg=000 cterm=bold
-  hi ircSpeaker ctermfg=137 ctermbg=233 cterm=bold
+  hi def ircSys     ctermfg=241 ctermbg=000 cterm=none
+  hi def ircDate    ctermfg=245 ctermbg=235 cterm=bold
+  hi def ircURL     ctermfg=027 ctermbg=000 cterm=bold
+  hi def ircIncr    ctermfg=034 ctermbg=000 cterm=bold
+  hi def ircDecr    ctermfg=196 ctermbg=000 cterm=bold
+  hi def ircName    ctermfg=172 ctermbg=000 cterm=bold
+  hi def ircSpeaker ctermfg=137 ctermbg=233 cterm=bold
 
 else
-  hi ircDo      ctermfg=002 ctermbg=000 cterm=bold
-  hi ircMsg     ctermfg=003 ctermbg=000 cterm=none
-  hi ircError   ctermfg=004 ctermbg=000 cterm=bold
-  hi ircFile    ctermfg=005 ctermbg=000 cterm=bold
+  hi def ircDo      ctermfg=002 ctermbg=000 cterm=bold
+  hi def ircMsg     ctermfg=003 ctermbg=000 cterm=none
+  hi def ircError   ctermfg=004 ctermbg=000 cterm=bold
+  hi def ircFile    ctermfg=005 ctermbg=000 cterm=bold
 
-  hi ircSys     ctermfg=006 ctermbg=000 cterm=none
-  hi ircDate    ctermfg=007 ctermbg=235 cterm=bold
-  hi ircURL     ctermfg=010 ctermbg=000 cterm=bold
-  hi ircIncr    ctermfg=009 ctermbg=000 cterm=bold
-  hi ircDecr    ctermfg=010 ctermbg=000 cterm=bold
-  hi ircName    ctermfg=011 ctermbg=000 cterm=bold
-  hi ircSpeaker ctermfg=012 ctermbg=233 cterm=bold
+  hi def ircSys     ctermfg=006 ctermbg=000 cterm=none
+  hi def ircDate    ctermfg=007 ctermbg=235 cterm=bold
+  hi def ircURL     ctermfg=010 ctermbg=000 cterm=bold
+  hi def ircIncr    ctermfg=009 ctermbg=000 cterm=bold
+  hi def ircDecr    ctermfg=010 ctermbg=000 cterm=bold
+  hi def ircName    ctermfg=011 ctermbg=000 cterm=bold
+  hi def ircSpeaker ctermfg=012 ctermbg=233 cterm=bold
 endif
 
 let b:current_syntax = "irc"
