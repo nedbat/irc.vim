@@ -1,3 +1,7 @@
+if exists("b:current_syntax")
+  finish
+endif
+
 let b:names = []
 
 function! Hash(str)
